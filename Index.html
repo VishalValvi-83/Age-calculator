@@ -12,6 +12,7 @@
             color: #fff;
 
         }
+
         .container {
             background-color: #f2f6f0b4;
             max-width: 400px;
@@ -23,6 +24,7 @@
             border-radius: 10px;
             text-align: center;
         }
+
         h1 {
             letter-spacing: 3px;
             padding: 10px;
@@ -30,6 +32,7 @@
             background-color: #6db45fe8;
             font-family: fantasy;
         }
+
         .calci-body {
             border-radius: 15px;
             height: 200px;
@@ -39,6 +42,7 @@
             background-color: #6db45fe8;
             margin-top: 80px;
         }
+
         input {
             border: none;
             background-color: rgba(76, 143, 57, 0.897);
@@ -81,17 +85,17 @@
     </div>
 
     <script>function calculatedob() {
-        var dob = document.getElementById('dob').value;
-        var dobDate = new Date(dob);
-        var today = new Date();
-        var age = today.getFullYear() - dobDate.getFullYear();
-        var month = today.getMonth() - dobDate.getMonth();
-        if (month < 0 || (month === 0 && today.getDate() < dobDate.getDate())) {
-            age--;
+            var dob = document.getElementById('dob').value;
+            var dobDate = new Date(dob);
+            var today = new Date();
+            var age = today.getFullYear() - dobDate.getFullYear();
+            var month = today.getMonth() - dobDate.getMonth();
+            if (month < 0 || (month === 0 && today.getDate() < dobDate.getDate())) {
+                age--;
+            }
+            document.getElementById('result').innerHTML = "Your age is: " + age;
         }
-        document.getElementById('result').innerHTML = "Your age is: " + age;
-    }
-</script>
+    </script>
 </body>
 
 </html>
