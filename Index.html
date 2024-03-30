@@ -79,7 +79,7 @@
         <div class="calci-body">
             <label for="dob"><b>Enter your Date of Birth</b></label><br>
             <input type="date" id="dob"><br>
-            <div id="result"></div><br>
+            <div id="result">Result : </div><br>
         </div>
         <button onclick="calculatedob()">Calculate Age</button>
     </div>
@@ -93,7 +93,7 @@
             if (month < 0 || (month === 0 && today.getDate() < dobDate.getDate())) {
                 age--;
             }
-            document.getElementById('result').innerHTML = "Your age is: " + age;
+            document.getElementById('result').innerHTML = "Result : Your age is " + age;
         }
     </script>
 </body>
