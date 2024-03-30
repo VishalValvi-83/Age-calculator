@@ -4,73 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
     <title>Age Calculator</title>
-    <style>
-        body {
-            background-image: url(./calculator-bg.avif);
-            font-family: Arial, Helvetica, sans-serif;
-            color: #fff;
-
-        }
-
-        .container {
-            background-color: #f2f6f0b4;
-            max-width: 400px;
-            height: 500px;
-            margin: 0 auto;
-            margin-top: 150px;
-            padding: 0;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        h1 {
-            letter-spacing: 3px;
-            padding: 10px;
-            color: #0c2102b4;
-            background-color: #6db45fe8;
-            font-family: fantasy;
-        }
-
-        .calci-body {
-            border-radius: 15px;
-            height: 200px;
-            margin: 0 auto;
-            padding: 20px;
-            width: 70%;
-            background-color: #6db45fe8;
-            margin-top: 80px;
-        }
-
-        input {
-            border: none;
-            background-color: rgba(76, 143, 57, 0.897);
-            border-radius: 10px;
-            color: #fff;
-            font-size: 20px;
-            margin: 20px 0;
-            padding: 10px;
-        }
-
-        button {
-            margin-top: 20px;
-            padding: 18px 25px;
-            font-weight: 600;
-            font-size: large;
-            background-color: #6db45fe8;
-            color: #fff;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        #result {
-            margin-top: 20px;
-            font-weight: bold;
-            font-size: 18px;
-        }
-    </style>
 </head>
 
 <body>
@@ -84,20 +20,7 @@
         <button onclick="calculatedob()">Calculate Age</button>
     </div>
 
-    <script>
-    function calculatedob() {
-            const dob = document.getElementById('dob').value;
-            const dobDate = new Date(dob);
-            const today = new Date();
-            const current = today.toLocaleDateString();
-            const age = today.getFullYear() - dobDate.getFullYear();
-            const month = today.getMonth() - dobDate.getMonth();
-            if (month < 0 || (month === 0 && today.getDate() < dobDate.getDate())) {
-                age--;
-            }
-            document.getElementById('result').innerHTML = `Result : Today is ${current} and Your age is ${age}`;
-        }
-    </script>
+    <script src="calci.js"></script>
 </body>
 
 </html>
