@@ -77,8 +77,21 @@
             <input type="date" id="dob"><br>
             <div id="result"></div><br>
         </div>
-        <button onclick="calculateAge()">Calculate Age</button>
+        <button onclick="calculatedob()">Calculate Age</button>
     </div>
+
+    <script>function calculatedob() {
+        var dob = document.getElementById('dob').value;
+        var dobDate = new Date(dob);
+        var today = new Date();
+        var age = today.getFullYear() - dobDate.getFullYear();
+        var month = today.getMonth() - dobDate.getMonth();
+        if (month < 0 || (month === 0 && today.getDate() < dobDate.getDate())) {
+            age--;
+        }
+        document.getElementById('result').innerHTML = "Your age is: " + age;
+    }
+</script>
 </body>
 
 </html>
